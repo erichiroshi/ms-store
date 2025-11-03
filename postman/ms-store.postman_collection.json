@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "5e51ead3-9f90-4f96-a729-d9234d2340bb",
+		"name": "ms-store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3936080"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/ms-user/users"
+					},
+					"response": []
+				},
+				{
+					"name": "User by email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/ms-user/users?email=maria@gmail.com",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ms-user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "maria@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/ms-user/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Users Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Maria Brown\",\r\n    \"email\": \"maria@gmail.com\",\r\n    \"phone\": \"123456\",\r\n    \"password\": \"988888888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/ms-user/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Users Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/ms-user/users/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Users Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\": \"Alex Green\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/ms-user/users/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/ms-store/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Order by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/ms-store/orders/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \r\n        \"moment\": \"2019-06-20T21:53:07\"\r\n     \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/ms-payment/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \r\n        \"moment\": \"2025-06-20T21:53:07\"\r\n     \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/ms-store/orders/payments/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/ms-product/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/ms-product/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Products by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/ms-product/products/1"
+			},
+			"response": []
+		}
+	]
+}

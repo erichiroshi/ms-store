@@ -26,10 +26,11 @@ Este projeto consiste em uma arquitetura de microserviços para uma loja digital
 - [🚐 Estrutura dos Microserviços](#-estrutura-dos-microserviços)
 - [🚀 Execução do Projeto](#-execução-do-projeto)
   - [✅ Pré-requisitos](#-pré-requisitos)
+  - [📥 Clonar o repositório](#-clonar-o-repositório)
   - [▶️ Rodar Microserviços](#️-rodar-microserviços)
   - [💾 Banco de Dados](#-banco-de-dados)
 - [💬 Interagindo com a API](#-interagindo-com-a-api)
-  - [📬 Endpoints e Exemplos](#-endpoints-e-exemplos)
+- [📬 Endpoints e Exemplos](#-endpoints-e-exemplos)
 - [👁️ Observações](#️-observações)
 - [🤝 Contribuições](#-contribuições)
 - [🔗 Referências e Créditos](#-referências-e-créditos)
@@ -73,6 +74,13 @@ O projeto possui os seguintes microserviços:
 - Maven
 - IDE (IntelliJ, STS, VS Code, etc.)
 
+### 📥 Clonar o repositório
+
+```bash
+git clone https://github.com/erichiroshi/ms-store
+cd store
+```
+
 ### ▶️ Rodar Microserviços
 1. Inicialize o **Eureka Server** (`ms-store-eureka-server`).
 2. Execute cada microserviço via Maven:
@@ -88,15 +96,19 @@ ou pela IDE.
 ### 💾 Banco de Dados
 
 Por padrão, a aplicação utiliza o **h2-Database**.  
-Para acessar o console:  👉 [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+Para acessar o console:  👉 [http://localhost:[verificar a porta]/h2-console](http://localhost:8080/h2-console)
 - Utilizar credências conforme configurado no application.properties de cada microserviço.
 
 ---
 
 ## 💬 Interagindo com a API
 
-### 📬 Endpoints e Exemplos
-Exemplo de endpoints de cada microserviço:
+As requisições podem ser testadas via Postman ou Insomnia.
+- Json para importar no postman: [json](postman/ms-store.postman_collection.json).
+
+
+## 📬 Endpoints e Exemplos
+Exemplo de endpoints de cada microserviço: http://localhost:8765/[nome-microserviço]/[endpoint]
 
 - **ms-user**
   - `POST /users` – Cria um usuário
